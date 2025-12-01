@@ -16,7 +16,7 @@ st.write("Usa la cámara para saber si es un perro o un gato.")
 # DEFINIMOS UNA FUNCIÓN PARA CARGAR EL MODELO Y GUARDARLO EN CACHE
 @st.cache_resource
 def carga_modelo():
-    modelo = keras.models.load_model("st-app/keras_model.h5", compile=False)
+    modelo = keras.models.load_model("app/keras_model.h5", compile=False)
     with open("app/labels.txt", "r") as f:
         clases = [line.strip() for line in f]  # Eliminar saltos de línea
     return modelo, clases
